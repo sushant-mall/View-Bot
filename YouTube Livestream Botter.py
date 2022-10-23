@@ -59,7 +59,7 @@ class proxy():
     def update(self):
         while True:
             data = ''
-            urls = ["https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&ssl=yes","https://www.proxy-list.download/api/v1/get?type=https&anon=elite"]
+            urls = ["https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all","https://www.proxy-list.download/api/v1/get?type=https&anon=elite"]
             for url in urls:
                 data += requests.get(url).text
 
